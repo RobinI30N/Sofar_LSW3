@@ -137,12 +137,12 @@ while chunks<2:
             output=output+"\""+ title + " (" + unit + ")" + "\":" + str(response)+","
         else:
             output=output+"\""+ title + "\":" + str(response)+","
-       if hexpos=='0x0015': totalpower+=response*ratio;
+       if hexpos=='0x0015': totalpower+=response*ratio*65535;
        if hexpos=='0x0016':
         totalpower+=response*ratio
         print(hexpos+" - "+title+": "+str(response*ratio)+unit)
         output=output+"\""+ title + " (" + unit + ")" + "\":" + str(totalpower)+","
-       if hexpos=='0x0017': totaltime+=response*ratio;
+       if hexpos=='0x0017': totaltime+=response*ratio*65535;
        if hexpos=='0x0018':
         totaltime+=response*ratio
         print(hexpos+" - "+title+": "+str(response*ratio)+unit)
